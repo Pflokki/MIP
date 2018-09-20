@@ -1,4 +1,5 @@
 import random
+import matplotlib.pyplot as plt
 
 
 def get_next_point(p_list: list):
@@ -46,6 +47,9 @@ def main():
 
     print(p_list)
     print(list(map(lambda p: p / (f_count * m_step_count), p_list)))
+    plt.bar([*range(5)], p_list, width=0.5)
+
+    plt.show()
 
 
 if __name__ == '__main__':
